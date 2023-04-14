@@ -12,13 +12,16 @@
     <h1> 
         Mein Snake Spiel von Mert Can Kaya (Übungsorojekt)
         <h2>
-            du bist Spieler Weiß.</h2>
+            du bist Spieler Weiß.
+        </h2>
         <h2>    
-            Deine Aufgabe ist es so viele Rote Kästchen wie möglich auf deine Seite zu ziehen und sie als Verbündete zu gewinnen! </h2>
+            Deine Aufgabe ist es so viele Rote Kästchen wie möglich auf deine Seite zu ziehen und sie als Verbündete zu gewinnen! 
+        </h2>
         <h2>
-            zum starten die Pfeiltasten bewegen</h2>
+            zum starten die Pfeiltasten bewegen
+        </h2>
     </h1>
-    <canvas id="canvas" width="720" height="720"></canvas>
+    <canvas id="canvas" width="720" height="720"> </canvas>
 
     <script>
         let canvas = document.getElementById('canvas');
@@ -54,7 +57,7 @@
             snake.forEach(part => add(part.x, part.y));
 
             ctx.fillStyle = 'red';
-            add(food.x, food.y); // Food
+            add(food.x, food.y);
 
             requestAnimationFrame(draw);
         }
@@ -65,7 +68,6 @@
             let otherParts = snake.slice(1);
             let duplicatePart = otherParts.find(part => part.x == firstPart.x && part.y == firstPart.y);
 
-            // 1. Schlange läuft gegen die Wand
             if (snake[0].x < 0 ||
                 snake[0].x > cols - 1 ||
                 snake[0].y < 0 ||
